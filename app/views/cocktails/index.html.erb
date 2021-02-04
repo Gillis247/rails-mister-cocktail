@@ -1,1 +1,25 @@
-<h1>Welcome to cocktails-club</h1>
+<div class = "banner" >
+  <div class="row justify-content-center">
+    <div>
+      <h1>Welcome to Cocktail Club</h1>
+        <h2>The industry leading library for all the worlds alcoholic beverages</h2>
+        <%= link_to 'Add a cocktail', new_cocktail_path, class: 'btn btn-primary' %>
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-center">
+  <h3>Start browsing</h3>
+</div>
+
+<div class="container">
+  <div class="row">
+   <% @cocktails.each do |cocktail| %>
+          <h3><%= cocktail.name %></h3>
+
+          <%= link_to 'Read more', cocktail_path(cocktail), class: 'card-link', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+

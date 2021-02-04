@@ -1,1 +1,13 @@
+<h3>Add a new dose</h3>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description %>
+  <%= f.association :ingredient %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
 
+
+<%#= simple_form_for @cocktail do |f| %>
+        <%#= f.association :ingredients, as: :radio_buttons %>
+        <%#= f.association :doses, abel_method: :cocktail_dose, value_method: :id, include_blank: false%>
+        <%#= f.button :submit, 'Update Cocktail', class: 'btn btn-primary' %>
+        <%# end %>
